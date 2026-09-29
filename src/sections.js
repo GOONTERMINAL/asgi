@@ -199,6 +199,7 @@ export function loop() {
       </div>
       <div class="loopchain" aria-label="Sequence">${L.chain.map((c, i) => `${i ? "<i>▼</i>" : ""}<b>${esc(c)}</b>`).join("")}</div>
       <p class="loopcap">${L.caption.map(esc).join("<br>")}</p>
+      <a class="btn btn--pink" href="#builder" style="margin-top:26px">${esc(L.cta)} ${ARROW_R}</a>
     </div>
   </section>`;
 }
@@ -332,5 +333,42 @@ export function community() {
     <p class="community__sub reveal">${esc(M.sub)}</p>
     <a class="btn btn--pink btn--xl reveal" data-link="join" href="#">${esc(M.cta)} ${ARROW_R}</a>
     <div class="socials reveal">${socialLinks("social")}</div>
+  </section>`;
+}
+
+/* ---- Launchpad factory ---------------------------------------------------- */
+export function builder() {
+  const F = C.BUILDER;
+  return `
+  <section id="builder" class="section" aria-label="Launchpad factory">
+    ${head("// INTERACTIVE", F.headline, F.subline)}
+    <div class="reveal">
+    ${win({
+      id: "factory", title: F.windowTitle, cls: "win--dark win--pink",
+      body: `<div class="builder">
+        <div class="builder__ctl">
+          <form id="lpForm" autocomplete="off">
+            <label class="builder__label" for="lpMeme">${esc(F.inputLabel)}</label>
+            <div class="builder__input"><span>$</span><input id="lpMeme" name="meme" maxlength="12" placeholder="${esc(F.inputPlaceholder)}" spellcheck="false" autocapitalize="characters" /></div>
+            <button class="btn btn--pink" type="submit" id="lpCreate">${esc(F.createLabel)} ${ROCKET.replace("<svg", '<svg style="height:1.4em;width:auto"')}</button>
+          </form>
+          <div class="builder__row">
+            <button class="btn btn--cyan btn--sm" type="button" id="lpNext" disabled>${esc(F.nextLabel)}</button>
+            <button class="btn btn--ghost btn--sm" type="button" id="lpAuto">${esc(F.autoLabel)}</button>
+            <button class="btn btn--ghost btn--sm" type="button" id="lpReset">${esc(F.resetLabel)}</button>
+          </div>
+          <div class="builder__stats">
+            <div><span>${esc(F.stats.depth)}</span><b id="lpDepth">0</b></div>
+            <div><span>${esc(F.stats.launchpads)}</span><b id="lpTotal">0</b></div>
+            <div><span>${esc(F.stats.coins)}</span><b id="lpCoins">0</b></div>
+            <div><span>${esc(F.stats.overflows)}</span><b id="lpOver">0</b></div>
+          </div>
+          <div class="builder__log" id="lpLog" aria-live="polite" aria-label="Launch log"></div>
+        </div>
+        <div class="builder__stage" id="lpStage"><div class="lpw__empty">${esc(F.emptyText)}</div></div>
+      </div>
+      <div class="mission__disc">${esc(F.disclaimer)}</div>`,
+    })}
+    </div>
   </section>`;
 }

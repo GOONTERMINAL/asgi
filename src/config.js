@@ -36,6 +36,7 @@ export const NAV = [
   { label: "HOME",          href: "#home" },
   { label: "ABOUT",         href: "#about" },
   { label: "LAUNCH ENGINE", href: "#engine" },
+  { label: "CREATE",        href: "#builder" },
   { label: "ROADMAP",       href: "#roadmap" },
   { label: "TOKENOMICS",    href: "#tokenomics" },
   { label: "MEMES",         href: "#memes" },
@@ -129,6 +130,51 @@ export const LOOP = {
     "THAT LAUNCHES A LAUNCHPAD",
     "THAT LAUNCHES A LAUNCHPAD...",
   ],
+  cta: "TRY IT YOURSELF",
+};
+
+/* ---- Launchpad factory: the interactive recursive scenario ---------------- */
+export const BUILDER = {
+  windowTitle: "LAUNCHPAD_FACTORY.exe",
+  headline: "CREATE A LAUNCHPAD",
+  subline: "THEN LAUNCH A LAUNCHPAD INSIDE IT. THEN ANOTHER. YOU KNOW THE DRILL.",
+  inputLabel: "FEED THE INU A MEME",
+  inputPlaceholder: "e.g. GOONBONE",
+  defaultMemes: ["GOONBONE", "SQUEAKYTOY", "TREATCOIN", "BORKBORK", "ZOOMIES", "GOODBOY"],
+  createLabel: "CREATE LAUNCHPAD",
+  nextLabel: "LAUNCH ANOTHER LAUNCHPAD",
+  autoLabel: "AUTO-RECURSE",
+  stopLabel: "STOP (COWARD)",
+  resetLabel: "RESET",
+  rebootLabel: "REBOOT INU",
+  emptyText: "NO LAUNCHPAD YET. FEED THE INU A MEME.",
+  maxDepth: 12,          // depth at which the stack "overflows"
+  autoDelayMs: 850,      // delay between levels in AUTO-RECURSE
+  stats: { depth: "DEPTH", launchpads: "LAUNCHPADS", coins: "COINS LAUNCHED", overflows: "STACK OVERFLOWS" },
+  // one line per depth (cycles if maxDepth is raised)
+  lines: [
+    "meme detected. deploying launchpad.",
+    "launchpad deployed. launching launchpad...",
+    "launchpad inside launchpad. inu approves.",
+    "launchpad inside launchpad inside launchpad. inu is thrilled.",
+    "depth 4. nobody asked for this.",
+    "depth 5. inu is now vibrating.",
+    "depth 6. the launchpads are launching launchpads.",
+    "depth 7. inu forgot what a meme was.",
+    "depth 8. this is fine.",
+    "depth 9. stack is sweating.",
+    "depth 10. inu has no notes.",
+    "depth 11. the recursion is load-bearing now.",
+    "depth 12. inu is committed.",
+  ],
+  overflowLines: [
+    "STACK OVERFLOW.",
+    "inu declares victory.",
+    "launching launchpad anyway...",
+  ],
+  infinityTitle: "LAUNCHPAD_∞.exe",
+  infinityText: "RECURSION LIMIT REACHED. THE INU LAUNCHED IT ANYWAY.",
+  disclaimer: "SIMULATION ONLY. NO REAL TOKENS, LAUNCHPADS OR CONTRACTS ARE CREATED. THE INU IS JUST GOONING.",
 };
 
 /* ---- Benchmarks (absurd) --------------------------------------------------- */

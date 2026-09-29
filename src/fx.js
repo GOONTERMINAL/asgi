@@ -65,8 +65,8 @@ export function initSpy() {
   const run = () => {
     ticking = false;
     const line = innerHeight * 0.35;
-    let idx = 0;
-    targets.forEach((t, i) => { if (t && t.getBoundingClientRect().top < line) idx = i; });
+    let idx = 0, best = -Infinity;
+    targets.forEach((t, i) => { if (!t) return; const top = t.getBoundingClientRect().top; if (top < line && top > best) { best = top; idx = i; } });
     links.forEach((l, i) => l.classList.toggle("active", i === idx));
   };
   window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(run); } }, { passive: true });
@@ -242,7 +242,7 @@ export function initMemes() {
   });
 }
 
-function bump(id, n) { if (id in state) { state[id] += n; paint(); } }
+export function bump(id, n) { if (id in state) { state[id] += n; paint(); } }
 
 /* ---- Launch sequence ---------------------------------------------------------------------- */
 let launching = false;
