@@ -20,8 +20,8 @@ export const SITE = {
 
 /* ---- Links (replace "#" with real URLs) ---------------------------------- */
 export const LINKS = {
-  buy: "#",        // where BUY $ASGI goes (DEX / launchpad page)
-  chart: "#",      // VIEW CHART (Dexscreener / Birdeye / etc.)
+  buy: "https://pump.fun/coin/DYyjAXi7McEVRQtyhCQjnsmNxu4AmjcZzV9HuhTdpump",        // where BUY $ASGI goes (DEX / launchpad page)
+  chart: "https://dexscreener.com/solana/DYyjAXi7McEVRQtyhCQjnsmNxu4AmjcZzV9HuhTdpump",      // VIEW CHART (Dexscreener / Birdeye / etc.)
   join: "#",       // JOIN THE GOONERS (Telegram / Discord invite)
   socials: [
     { id: "x",        label: "X",        href: "#" },
@@ -214,10 +214,10 @@ export const TOKENOMICS = {
   windowTitle: "TOKENOMICS.exe",
   headline: "TOKENOMICS",
   subline: "NUMBERS ARRIVE WHEN THE INU DECIDES THEY ARRIVE.",
-  contract: "0x...",
+  contract: "DYyjAXi7McEVRQtyhCQjnsmNxu4AmjcZzV9HuhTdpump",
   rows: [
     { label: "TOTAL SUPPLY", value: "TBD" },
-    { label: "CONTRACT",     value: "0x...", copy: true },
+    { label: "CONTRACT",     value: "DYyjAXi7McEVRQtyhCQjnsmNxu4AmjcZzV9HuhTdpump", copy: true },
     { label: "COMMUNITY",    value: "TBD" },
     { label: "LIQUIDITY",    value: "TBD" },
     { label: "TAX",          value: "TBD" },
@@ -241,7 +241,7 @@ export const FAQ = {
     { q: "WHAT IS $ASGI?", a: "A meme coin about a superintelligent Inu that found the launchpad and cannot stop. It is a joke with a mascot." },
     { q: "WHAT IS A LAUNCHPAD?", a: "A place where coins get launched. In the ASGI universe it is also where launchpads get launched. Do not think about it too hard." },
     { q: "IS THIS FINANCIAL ADVICE?", a: "No. It is a dog. Do your own research and never spend money you are not prepared to lose." },
-    { q: "WHAT IS THE CONTRACT ADDRESS?", a: "TBD. Only trust the address published in the official channels, and check it twice. Anyone DMing you a different one is not the Inu." },
+    { q: "WHAT IS THE CONTRACT ADDRESS?", a: "DYyjAXi7McEVRQtyhCQjnsmNxu4AmjcZzV9HuhTdpump — check it twice against this site. Anyone DMing you a different one is not the Inu." },
     { q: "ARE THE NUMBERS ON THE SITE REAL?", a: "No. The mission-control metrics, benchmarks and everything with an infinity sign are fictional and part of the bit." },
     { q: "WHEN MOON?", a: "The Inu does not do timelines. The Inu does launchpads." },
   ],
